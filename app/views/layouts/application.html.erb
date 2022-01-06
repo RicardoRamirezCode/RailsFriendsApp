@@ -21,6 +21,12 @@
     <!-- rendering our partial -->
     <%= render 'home/header' %>
     <div class="container">
+
+      <!-- If statement, if there is a notice then it will render-->
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+
       <br/>
       <%= yield %>  
     </div>    
